@@ -1,0 +1,568 @@
+@page {
+  margin: 0px;
+}
+body {
+  -webkit-print-color-adjust: exact !important;
+}
+
+@font-face {
+  font-family: 'Cerebri Sans';
+  src: url(../fonts/cerebrisans/cerebrisans-regular.eot);
+  src:
+    url(../fonts/cerebrisans/cerebrisans-regular.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/cerebrisans/cerebrisans-regular.woff) format('woff'),
+    url(../fonts/cerebrisans/cerebrisans-regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cerebri Sans';
+  src: url(../fonts/cerebrisans/cerebrisans-medium.eot);
+  src:
+    url(../fonts/cerebrisans/cerebrisans-medium.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/cerebrisans/cerebrisans-medium.woff) format('woff'),
+    url(../fonts/cerebrisans/cerebrisans-medium.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cerebri Sans';
+  src: url(../fonts/cerebrisans/cerebrisans-semibold.eot);
+  src:
+    url(../fonts/cerebrisans/cerebrisans-semibold.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/cerebrisans/cerebrisans-semibold.woff) format('woff'),
+    url(../fonts/cerebrisans/cerebrisans-semibold.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/tajawal/Iura6YBj_oCad4k1nzSBC45I.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/tajawal/Iurf6YBj_oCad4k1l8KiHrRpiYlJ.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/tajawal/Iurf6YBj_oCad4k1l4qkHrRpiYlJ.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(../fonts/tajawal/Iurf6YBj_oCad4k1l5anHrRpiYlJ.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(../fonts/tajawal/Iurf6YBj_oCad4k1l7KmHrRpiYlJ.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+body {
+  font-family: 'Cerebri Sans', 'Tajawal', sans-serif;
+}
+
+body {
+  color: #12263f;
+  direction: rtl;
+  padding: 0px;
+  text-align: right;
+}
+
+.badge-dark {
+  color: #fff;
+  background-color: #12263f;
+}
+
+img {
+  max-width: 4.5rem;
+}
+
+.badge {
+  width: 60px;
+  display: inline-block;
+  padding: 0.33em 0.5em;
+  font-size: 76%;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.375rem;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.row {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.col-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+.col-4 {
+  display: inline-block;
+  width: 33.33333333333332%;
+  box-sizing: border-box;
+  float: right;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.col-md-6 {
+  display: inline-block;
+  width: 50%;
+  float: right;
+}
+
+.text-md-right {
+  text-align: left !important;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  color: #12263f;
+}
+
+.text-muted {
+  color: #95aac9 !important;
+}
+
+.text-body {
+  color: #12263f !important;
+}
+
+.table thead th {
+  background-color: #f9fbfd;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #95aac9;
+  border-bottom-width: 1px;
+
+  padding: 1rem;
+  text-align: right;
+}
+
+.small {
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+.table td,
+.table th {
+  padding: 1rem;
+  vertical-align: top;
+  border-top: 1px solid #edf2f9;
+}
+
+.hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #e3ebf6;
+  background: #e3ebf6;
+}
+
+.col-9 {
+  width: 65%;
+}
+
+.col-3 {
+  width: 35%;
+}
+
+.customed-table-small td,
+.customed-table-small th {
+  padding: 0.4rem 0 !important;
+  border-top: none;
+}
+
+.customed-table-small th {
+  width: 140px;
+}
+
+.price-show {
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-content {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.33em 0.5em;
+  font-size: 76%;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.375rem;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge {
+    transition: none;
+  }
+}
+
+a.badge:focus,
+a.badge:hover {
+  text-decoration: none;
+}
+
+.badge:empty {
+  display: none;
+}
+
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem;
+}
+
+.badge-primary {
+  color: #fff;
+  background-color: #2c7be5;
+}
+
+a.badge-primary:focus,
+a.badge-primary:hover {
+  color: #fff;
+  background-color: #1862c6;
+}
+
+a.badge-primary.focus,
+a.badge-primary:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(44, 123, 229, 0.5);
+}
+
+.badge-secondary {
+  color: #fff;
+  background-color: #6e84a3;
+}
+
+a.badge-secondary:focus,
+a.badge-secondary:hover {
+  color: #fff;
+  background-color: #566b88;
+}
+
+a.badge-secondary.focus,
+a.badge-secondary:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(110, 132, 163, 0.5);
+}
+
+.badge-success {
+  color: #fff;
+  background-color: #00d97e;
+}
+
+a.badge-success:focus,
+a.badge-success:hover {
+  color: #fff;
+  background-color: #00a660;
+}
+
+a.badge-success.focus,
+a.badge-success:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(0, 217, 126, 0.5);
+}
+
+.badge-info {
+  color: #fff;
+  background-color: #39afd1;
+}
+
+a.badge-info:focus,
+a.badge-info:hover {
+  color: #fff;
+  background-color: #2991ae;
+}
+
+a.badge-info.focus,
+a.badge-info:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(57, 175, 209, 0.5);
+}
+
+.badge-warning {
+  color: #283e59;
+  background-color: #f6c343;
+}
+
+a.badge-warning:focus,
+a.badge-warning:hover {
+  color: #283e59;
+  background-color: #f4b312;
+}
+
+a.badge-warning.focus,
+a.badge-warning:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(246, 195, 67, 0.5);
+}
+
+.badge-danger {
+  color: #fff;
+  background-color: #e63757;
+}
+
+a.badge-danger:focus,
+a.badge-danger:hover {
+  color: #fff;
+  background-color: #d01a3b;
+}
+
+a.badge-danger.focus,
+a.badge-danger:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(230, 55, 87, 0.5);
+}
+
+.badge-light {
+  color: #283e59;
+  background-color: #edf2f9;
+}
+
+a.badge-light:focus,
+a.badge-light:hover {
+  color: #283e59;
+  background-color: #c7d6ec;
+}
+
+a.badge-light.focus,
+a.badge-light:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(237, 242, 249, 0.5);
+}
+
+.badge-dark {
+  color: #fff;
+  background-color: #12263f;
+}
+
+a.badge-dark:focus,
+a.badge-dark:hover {
+  color: #fff;
+  background-color: #070e17;
+}
+
+a.badge-dark.focus,
+a.badge-dark:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(18, 38, 63, 0.5);
+}
+
+.badge-white {
+  color: #283e59;
+  background-color: #fff;
+}
+
+a.badge-white:focus,
+a.badge-white:hover {
+  color: #283e59;
+  background-color: #e6e6e6;
+}
+
+a.badge-white.focus,
+a.badge-white:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.5);
+}
+
+.inv-design .table td,
+.inv-design .table th {
+  border-top: none;
+  padding: 3px !important;
+  vertical-align: top;
+  border: 1px solid #000000;
+  background: white;
+  font-size: 15px;
+  color: #000;
+}
+
+.customed-table-small th {
+  width: 140px;
+}
+
+.price-show {
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-content {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sm-inv-img {
+  max-width: 2cm;
+  max-height: 2cm;
+  margin: 0px auto;
+  display: block;
+  filter: grayscale(1);
+  outline: none;
+  border: none;
+}
+
+.inv-design {
+  background: white;
+  padding: 0.3cm;
+  margin: 0px auto;
+  display: block;
+  width: 8cm !important;
+  max-width: 8cm;
+  box-sizing: border-box;
+}
+
+.f-14 {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 0px;
+}
+
+.f-12 {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.card-header {
+  text-align: center;
+}
+.form-control[disabled] {
+  background: #d2ddec;
+  opacity: 0.85;
+}
+
+/* invoice style */
+.invoice-show .badge {
+  display: none;
+}
+
+.invoice-show .col.text-center {
+  position: absolute;
+  width: 100%;
+}
+
+.invoice-show .table thead th,
+.invoice-show .table tbody td[colspan] {
+  background-color: #d9d9d9 !important;
+  color: #000000;
+}
+.invoice-show .table thead th .h6 {
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.invoice-show .table td,
+.invoice-show .table th {
+  padding: 0.35rem !important;
+  vertical-align: top;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000;
+}
+
+.invoice-show .table td,
+.invoice-show .table th {
+  border: 1px solid #000000 !important;
+}
+
+.invoice-show .table {
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+.invoice-show .table tbody td:not([colspan]):nth-of-type(1) {
+  font-weight: 600;
+}
+
+.invoice-show .text-muted {
+  color: #464646 !important;
+  margin-top: -6px;
+  margin-bottom: 9px;
+}
+
+.invoice-show h2 {
+  margin-bottom: 10px;
+}
+
+.invoice-show .mb-2 {
+  margin-top: 0px;
+}
+
+.invoice-show img-fluid {
+  margin-bottom: 4px;
+  filter: grayscale(1);
+}

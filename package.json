@@ -1,0 +1,33 @@
+{
+  "name": "pioneer-desktop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "build": {
+    "appId": "com.pioneer.id",
+    "productName": "Pioneer server manager",
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ],
+      "publisherName": "Pioneer",
+      "signingHashAlgorithms": [
+        "sha256"
+      ]
+    }
+  }
+}
