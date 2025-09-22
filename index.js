@@ -1,5 +1,5 @@
-const { app, BrowserWindow } = require('electron');
-const WebSocket = require('ws');
+const { app, BrowserWindow, ipcMain } = require('electron');
+const path = require('path')
 
 app.on('ready', () => {
   // Create the main app window and load index.html
@@ -7,33 +7,29 @@ app.on('ready', () => {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true,
-    },
+      preload: path.join(__dirname, 'preload.js'),
+      contextIsolation: true,
+      enableRemoteModule: false,
+      nodeIntegration: false
+    }
   });
 
-  mainWindow.setMenuBarVisibility(false);
+  // mainWindow.setMenuBarVisibility(false);
 
   mainWindow.loadFile((__dirname, 'src/index.html'));
 
-  // Create WebSocket Server
-  const wss = new WebSocket.Server({ port: 8080 });
-
-  wss.on('connection', (ws) => {
-    ws.on('message', (message) => {
-      const data = JSON.parse(message);
-
-      const printWindow = new BrowserWindow({ show: false });
-      printWindow.loadURL(`data:text/html;charset=utf-8,${encodeURIComponent(data.data)}`);
-      printWindow.webContents.on('did-finish-load', () => {
-        printWindow.webContents.print(data.options, (success, errorType) => {
-          if (!success) console.error('Print failed:', errorType);
-          printWindow.close();
-        });
-      });
-    });
-  });
-
-  console.log('WebSocket server running on ws://localhost:8080');
 });
 
-app.on('window-all-closed', (event) => event.preventDefault());
+// Listen for print requests
+ipcMain.on('print-html', (event, data) => {
+  const printWin = new BrowserWindow({ show: false })
+  printWin.loadURL(`data:text/html;charset=utf-8,${encodeURIComponent(data.data)}`)
+
+  printWin.webContents.on('did-finish-load', () => {
+    printWin.webContents.print(data.options, (success, failureReason) => {
+        if (!success) console.log('Print failed:', failureReason)
+        printWin.close()
+      }
+    )
+  })
+})
