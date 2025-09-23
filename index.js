@@ -4,8 +4,7 @@ const path = require('path')
 app.on('ready', () => {
   // Create the main app window and load index.html
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    show: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
@@ -14,9 +13,10 @@ app.on('ready', () => {
     }
   });
 
-  // mainWindow.setMenuBarVisibility(false);
-
+  mainWindow.setMenuBarVisibility(false);
   mainWindow.loadFile((__dirname, 'src/index.html'));
+  mainWindow.maximize()
+  mainWindow.show()
 
 });
 
