@@ -13,7 +13,7 @@ app.on('ready', () => {
     }
   });
 
-  mainWindow.setMenuBarVisibility(false);
+  // mainWindow.setMenuBarVisibility(false);
   mainWindow.loadFile((__dirname, 'src/index.html'));
   mainWindow.maximize()
   mainWindow.show()
