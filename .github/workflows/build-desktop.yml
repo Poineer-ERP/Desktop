@@ -75,7 +75,8 @@ jobs:
       - name: Build Electron app
         run: npm run ${{ matrix.build_script }}
         env:
-          CSC_IDENTITY_AUTO_DISCOVERY: false  # skip code signing for now
+          CSC_IDENTITY_AUTO_DISCOVERY: false
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # ── Rename outputs to fixed filenames ─────────────────────────────────
       # Fixed names are required so the GitHub "latest release" URL never changes.
