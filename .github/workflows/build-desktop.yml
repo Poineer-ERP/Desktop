@@ -96,8 +96,9 @@ jobs:
         shell: bash
         run: |
           cd release-builds
-          dmg=$(ls *.dmg 2>/dev/null | head -1)
-          zip=$(ls *.zip 2>/dev/null | head -1)
+          # electron-builder names the file Qeyam-x.x.x.dmg — rename to fixed name
+          dmg=$(ls *.dmg 2>/dev/null | grep -v arm64 | head -1)
+          zip=$(ls *.zip 2>/dev/null | grep -v arm64 | head -1)
           [ -n "$dmg" ] && mv "$dmg" "Qeyam.dmg"
           [ -n "$zip" ] && mv "$zip" "Qeyam-mac.zip"
 
