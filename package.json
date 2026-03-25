@@ -5,29 +5,47 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder --win --x64"
+    "build:win": "electron-builder --win --x64",
+    "build:mac": "electron-builder --mac --x64 --arm64"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^33.2.1",
+    "electron": "^40.8.0",
     "electron-builder": "^25.1.8"
   },
   "dependencies": {
     "ws": "^8.18.0"
   },
   "build": {
-    "appId": "com.pioneer.id",
-    "productName": "Pioneer server manager",
+    "appId": "com.qeyam.desktop",
+    "productName": "Qeyam",
+    "directories": {
+      "output": "release-builds"
+    },
+    "files": [
+      "src/**/*",
+      "index.js",
+      "preload.js",
+      "package.json"
+    ],
     "win": {
+      "target": ["nsis", "zip"],
+      "publisherName": "Qeyam",
+      "icon": "icon.ico",
+      "signingHashAlgorithms": ["sha256"]
+    },
+    "mac": {
       "target": [
-        "nsis",
-        "zip"
+        { "target": "dmg", "arch": ["x64", "arm64"] },
+        { "target": "zip", "arch": ["x64", "arm64"] }
       ],
-      "publisherName": "Pioneer",
-      "signingHashAlgorithms": [
-        "sha256"
-      ]
+      "category": "public.app-category.business",
+      "icon": "icon.icns"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     }
   }
 }
